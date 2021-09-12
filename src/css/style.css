@@ -1,33 +1,123 @@
 body{
     font-family: Arial, sans-serif;
 }
+
+
 nav.шапка{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
+    z-index: 1;
     }
 .logo{
     color: #fff;
     font-size: 28px;
     line-height: 60px;
     padding-left: 388px;
-    float: left
+    float: left;
+    animation: comming 3s;
 }
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes spysk{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+
+
 .menu{
     float: left;
     padding-left: 430px;
 }
+
+
 .menu li{
   float: left;
+  line-height: 60px;
   color: #fff;
   font-size: 16px;
-  line-height: 60px;
   margin-right: 40px;
   text-transform: uppercase;
+  animation: spysk 0.4s ease forwards;
+  opacity: 0;  
 }
-.menu1{
+.menu li:nth-child(2){
+    animation-delay: 0.6s;
+}
+.menu li:nth-child(3){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(5){
+    animation-delay: 2s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2.4s;
+}
+
+.menu li a{
+    color: #fff;
+}
+.menu li a:hover{
+    color: #f78d00;
+    transform: scale(1.1);
+}
+.menu li a:before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #f78d00;
+    margin-right: 10px;
+}
+.menu li a:before{
+    display: block;
     width: 100%;
-    height: calc(100% - 60px);
+    height: 5px;
+    transform: scaleX(0);
+    background-color: #f78d00;
+    transition: all 0.3s;
+}
+.menu li a:hover::before{
+    transform: scaleX(1);
+}
+.menu li a{
+    transition-duration: 0.3s;
+    display: inline-block;
+    transform: scale(1);     
+}
+.menu li a:active{
+    transform: scale(1.05);
+}
+
+
+
+.menu1 {
+    width: 100%;
+    height: 100%;
     background: url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png) 90% 100%/auto 80% no-repeat , url(../img/%D1%84%D0%BE%D0%BD.png) center/cover no-repeat;
 }
 .title_container{
@@ -39,12 +129,25 @@ nav.шапка{
 .title_container h1{
     font-size: 50px;
     font-weight: 600;
+    animation: spysk1 2s ease;
 }
+@keyframes spysk1{
+    from{
+        opacity: 0;
+        margin-left: -380px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
 .title_container h4{
     font-size: 30px;
     margin-top: 40px;
     color: #79818d;
 }
+    
 .title_container input{
     height: 40px;
     text-align: center;
@@ -57,6 +160,19 @@ nav.шапка{
     padding: 0px 10px;
     margin: 40px 14px;
 }
+.title_container input{
+    transition: all 0.3s;
+    transform: scale(1);
+}
+.title_container input:hover{
+    background-color: #263244;
+    color: #fff;
+    transform: scale(1.1);
+}
+.title_container input:active{
+    transform: scale(1.05);
+}
+ 
 div.obo_mne{
     float: left;
     width: 100%;
@@ -68,8 +184,11 @@ div.obo_mne{
     color: #263244;
     text-align: center;
     font-weight: 600;
-    margin-top: 110px;   
+    margin-top: 110px;
+    
 }
+
+
 .liniy{
    background: url(../img/%D1%87%D0%B5%D1%80%D1%82%D0%B0_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6.png) 50% 100% no-repeat; 
 }
@@ -94,6 +213,17 @@ p.obo_mne{
     font-weight: 600;
     padding: 0px 10px 0px 30px;
     margin: 40px 860px;
+    
+}
+.obo_mne input{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.obo_mne input:hover{
+    transform: scale(1.1);
+}
+.obo_mne input:active{
+    transform: scale(1.05);
 }
 div.что_я_умею{
     float: left;
@@ -111,7 +241,8 @@ div.что_я_умею{
 .иконка_пк{
     float: left;
     margin: 100px 0px 0px 490px;
-}
+    }
+
 .иконка_пк h4{
     float: left;
     margin: 30px 0px 0px -22px;
@@ -128,6 +259,29 @@ div.что_я_умею{
     font-size: 14px;
     font-weight: 600;
 }
+.прыжки_пк{
+    animation: bounce 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+
 .иконка_стрелочки{
     float: left;
     margin: 100px 160px;
@@ -208,8 +362,10 @@ div.кейсы{
 }
 .кейсы img{    
   background: url(../img/%D0%BA%D0%B5%D0%B9%D1%81%D1%8B%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.jpg) no-repeat;
-    margin: 40px 388px;  
+    margin: 40px 388px;
+     
 }
+
 .клиенты h3{
     float: left;
     font-size: 30px;
@@ -259,8 +415,19 @@ div.кейсы{
     font-size: 20px;
     font-weight: 600;
     padding: 23px 10px;
-    margin: 120px 0px 0px -570px;
+    margin: 120px 0px 0px -570px;    
 } 
+.посетить_сайт a{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.посетить_сайт a:hover{
+    transform: scale(1.2);
+}
+.посетить_сайт a:active{
+    transform: scale(1.1);
+}
+
 div.расчет_стоимости{
     float: left;
     width: 100%;
@@ -290,6 +457,13 @@ div.расчет_стоимости{
     border-radius: 10px;
     padding: 0px 15px;
     margin: 20px 0px 0px 500px;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.ctoimoct select:hover{
+    background-color: #db8755;
+    transform: scale(1.03);
+ 
 }
 .дизайн h3{
     font-size: 22px;
@@ -307,7 +481,13 @@ div.расчет_стоимости{
     border-radius: 10px;
     padding: 0px 15px;
     margin: 20px 0px 0px 500px;
-}    
+    transform: scale(1);
+    transition: all 0.3s;
+}   
+.дизайн select:hover{
+    background-color: #db8755;
+    transform: scale(1.03);
+}
 .адаптивность h3{
     font-size: 22px;
     color: #263244;
@@ -324,7 +504,13 @@ div.расчет_стоимости{
     border-radius: 10px;
     padding: 0px 15px;
     margin: 20px 0px 0px 500px;
-}    
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.адаптивность select:hover{
+    background-color: #db8755;
+    transform: scale(1.03);
+}
 .линия_стоимости{
     height: 5px;
     width: 887px;
@@ -343,12 +529,21 @@ h4 p{
 h4 span{
     font-size: 20px;
     margin: -20px 0px 0px 745px;
-}  
+} 
+
+
+
+
+
+
+
 div.немного_статистики{
     float: left;
     width: 100%;
     height: 500px;
     background: url(../img/%D1%84%D0%BE%D0%BD%20%D0%BD%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8.jpg) center;
+    background-size: 110% 110%;
+    background-attachment: fixed;
     }
 .немного_статистики h2{
     font-size: 30px;
@@ -361,9 +556,6 @@ div.немного_статистики{
     float: left;
     margin: 100px 0px 0px 490px;
 }
-
-
-
 .смайлик h4{
     float: left;
     margin: 30px 0px 0px 4px;
@@ -440,6 +632,11 @@ div.немного_статистики{
     font-size: 16px;
     font-weight: 600;
 }
+
+
+
+
+
 div.отзывы{
     float: left;
     width: 100%;
@@ -512,7 +709,7 @@ footer{
     color: #fff;
     font-size: 14px;
 }
-.телефон img{
+.телефон img {
     float: left;
     margin: 45px 0px 0px 153px;
 }
@@ -576,20 +773,57 @@ footer{
     font-weight: 600;
     padding: 0px 10px;
     margin: 220px 0px 0px -355px;
+    transform: scale(1);
+}
+
+.отправить input{
+    transition: all 0.3s;
+    transform: scale(1);
+}
+.отправить input:hover{
+    background-color: #263244;
+    color: #fff;
+    transform: scale(1.1);
+}
+.отправить input:active{
+    transform: scale(1.05);
 }
 .фейс img{
     float: left;
     margin: 285px 0px 0px -400px;
 }
+.фейс img:hover{
+    animation: вращение 2s ease;
+}
 .твит img{
     float: left;
     margin: 285px 0px 0px -315px;
 }
+.твит img:hover{
+    animation: вращение 2s ease;
+}
 .инст img{
     float: left;
-    margin: 285px 0px 0px -220px;
+    margin: 285px 0px 0px -220px;   
+}
+.инст img:hover{
+    animation: вращение 2s ease;
 }
 
+@keyframes вращение{
+    0%{
+       transform: rotateY(360deg); 
+    }
+    25%{
+       transform: rotateY(180deg); 
+    }
+    50%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
 
 
 
