@@ -261,6 +261,13 @@ section.что_я_умею {
     center;
   flex-wrap: wrap;
 }
+@media (max-width: 574px) {
+  section.что_я_умею {
+    height: 675px;
+    background-size: auto 100%;
+  }
+}
+
 .что_я_умею h2 {
   font-size: 30px;
   color: #263244;
@@ -269,21 +276,16 @@ section.что_я_умею {
   margin-top: 110px;
 }
 .иконка_пк {
-  float: left;
   margin-top: 80px;
 }
 
 .иконка_пк h4 {
-  float: left;
-
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 18px;
 }
 .иконка_пк h6 {
-  float: left;
-
   text-align: center;
   color: #616876;
   font-size: 14px;
@@ -315,61 +317,46 @@ section.что_я_умею {
 }
 
 .иконка_стрелочки {
-  float: left;
   margin-top: 80px;
   flex-wrap: wrap;
 }
 .иконка_стрелочки h4 {
-  float: left;
-
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 18px;
 }
 .иконка_стрелочки h6 {
-  float: left;
-
   text-align: center;
   color: #616876;
   font-size: 14px;
   font-weight: 600;
 }
 .иконка_ракеты {
-  float: left;
   margin-top: 80px;
 }
 .иконка_ракеты h4 {
-  float: left;
-
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 18px;
 }
 .иконка_ракеты h6 {
-  float: left;
-
   text-align: center;
   color: #616876;
   font-size: 14px;
   font-weight: 600;
 }
 .иконка_рупор {
-  float: left;
   margin-top: 80px;
 }
 .иконка_рупор h4 {
-  float: left;
-
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 18px;
 }
 .иконка_рупор h6 {
-  float: left;
-
   text-align: center;
   color: #616876;
   font-size: 14px;
@@ -533,6 +520,12 @@ h4 span {
   background-size: auto 100%;
   background-attachment: fixed;
 }
+@media (max-width: 574px) {
+  .немного_статистики {
+    height: 600px;
+    background-size: auto 100%;
+  }
+}
 .немного_статистики h2 {
   font-size: 30px;
   color: #263244;
@@ -566,7 +559,6 @@ h4 span {
 }
 
 .больше_меньше {
-  float: left;
 }
 .больше_меньше h4 {
   text-align: center;
@@ -581,7 +573,6 @@ h4 span {
   font-weight: 600;
 }
 .галочка {
-  float: left;
 }
 .галочка h4 {
   text-align: center;
@@ -595,9 +586,7 @@ h4 span {
   font-size: 16px;
   font-weight: 600;
 }
-.чаша img {
-  padding: 50% 0%;
-}
+
 .кубок h4 {
   text-align: center;
   color: #cf7600;
