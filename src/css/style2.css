@@ -7,15 +7,18 @@ nav.шапка {
   height: 60px;
   background: #344051;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
 }
 .logo {
   color: #fff;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 60px;
-  padding-left: 388px;
   float: left;
   animation: comming 3s;
+}
+
+.цвет-меню:hover {
+  color: rgb(196, 134, 2);
 }
 
 @keyframes comming {
@@ -44,14 +47,13 @@ main {
 
 .menu {
   float: left;
-  padding-left: 430px;
 }
 
 .menu li {
   float: left;
   line-height: 60px;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 40px;
   text-transform: uppercase;
   animation: spysk 0.4s ease forwards;
@@ -75,6 +77,7 @@ main {
 
 .menu li a {
   color: #fff;
+  text-decoration: none;
 }
 .menu li a:hover {
   color: #f78d00;
@@ -117,12 +120,13 @@ main {
 }
 .title_container {
   float: left;
-  margin: 430px 0px 0px 400px;
   color: #2c384a;
   text-align: center;
+  width: 100%;
+  padding-top: 250px;
 }
 .title_container h1 {
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 600;
   animation: spysk1 2s ease;
 }
@@ -168,7 +172,36 @@ main {
   transform: scale(1.05);
 }
 
-div.obo_mne {
+@media (max-width: 991px) {
+  .title_container,
+  .title_container h4,
+  .title_container input {
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 3;
+  }
+  .title_container input {
+    border: 2px solid #fff;
+  }
+  .nav {
+    z-index: 4;
+  }
+  .menu1 {
+    position: relative;
+  }
+  .menu1::after {
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+}
+
+section.obo_mne {
   float: left;
   width: 100%;
   height: 710px;
@@ -184,12 +217,12 @@ div.obo_mne {
 
 .liniy {
   background: url(../img/%D1%87%D0%B5%D1%80%D1%82%D0%B0_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6.png)
-    50% 100% no-repeat;
+    50% 0% no-repeat;
 }
 .obo_mne img {
   background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0%20%D0%BA%D1%80%D1%83%D0%B3.png)
     no-repeat;
-  margin: 59px 853px;
+  margin-top: 50px;
 }
 p.obo_mne {
   font-size: 18px;
@@ -208,7 +241,6 @@ p.obo_mne {
   font-size: 16px;
   font-weight: 600;
   padding: 0px 10px 0px 30px;
-  margin: 40px 860px;
 }
 .obo_mne input {
   transform: scale(1);
@@ -220,12 +252,14 @@ p.obo_mne {
 .obo_mne input:active {
   transform: scale(1.05);
 }
-div.что_я_умею {
+
+section.что_я_умею {
   float: left;
   width: 100%;
   height: 525px;
   background: url(../img/%D1%84%D0%BE%D0%BD%20%D1%87%D1%82%D0%BE%20%D1%8F%20%D1%83%D0%BC%D0%B5%D1%8E.jpg)
     center;
+  flex-wrap: wrap;
 }
 .что_я_умею h2 {
   font-size: 30px;
@@ -236,12 +270,12 @@ div.что_я_умею {
 }
 .иконка_пк {
   float: left;
-  margin: 100px 0px 0px 490px;
+  margin-top: 80px;
 }
 
 .иконка_пк h4 {
   float: left;
-  margin: 30px 0px 0px -22px;
+
   text-align: center;
   color: #cf7600;
   font-weight: 700;
@@ -249,7 +283,7 @@ div.что_я_умею {
 }
 .иконка_пк h6 {
   float: left;
-  margin: 30px 0px 0px -57px;
+
   text-align: center;
   color: #616876;
   font-size: 14px;
@@ -282,11 +316,12 @@ div.что_я_умею {
 
 .иконка_стрелочки {
   float: left;
-  margin: 100px 160px;
+  margin-top: 80px;
+  flex-wrap: wrap;
 }
 .иконка_стрелочки h4 {
   float: left;
-  margin: 30px 0px 0px -22px;
+
   text-align: center;
   color: #cf7600;
   font-weight: 700;
@@ -294,7 +329,7 @@ div.что_я_умею {
 }
 .иконка_стрелочки h6 {
   float: left;
-  margin: 30px 0px 0px -55px;
+
   text-align: center;
   color: #616876;
   font-size: 14px;
@@ -302,11 +337,11 @@ div.что_я_умею {
 }
 .иконка_ракеты {
   float: left;
-  margin: 100px 20px;
+  margin-top: 80px;
 }
 .иконка_ракеты h4 {
   float: left;
-  margin: 26px 0px 0px -62px;
+
   text-align: center;
   color: #cf7600;
   font-weight: 700;
@@ -314,7 +349,7 @@ div.что_я_умею {
 }
 .иконка_ракеты h6 {
   float: left;
-  margin: 30px 0px 0px -65px;
+
   text-align: center;
   color: #616876;
   font-size: 14px;
@@ -322,11 +357,11 @@ div.что_я_умею {
 }
 .иконка_рупор {
   float: left;
-  margin: 100px 130px;
+  margin-top: 80px;
 }
 .иконка_рупор h4 {
   float: left;
-  margin: 30px 0px 0px -24px;
+
   text-align: center;
   color: #cf7600;
   font-weight: 700;
@@ -334,13 +369,23 @@ div.что_я_умею {
 }
 .иконка_рупор h6 {
   float: left;
-  margin: 30px 0px 0px -55px;
+
   text-align: center;
   color: #616876;
   font-size: 14px;
   font-weight: 600;
 }
-div.кейсы {
+@media (max-width: 650px) {
+  .иконка_пк,
+  .иконка_стрелочки,
+  .иконка_ракеты,
+  .иконка_рупор {
+    margin-left: -30px;
+    flex-wrap: wrap;
+  }
+}
+
+section.кейсы {
   float: left;
   width: 100%;
   height: 1150px;
@@ -358,75 +403,82 @@ div.кейсы {
   text-align: center;
   font-size: 20px;
 }
-.кейсы img {
-  background: url(../img/%D0%BA%D0%B5%D0%B9%D1%81%D1%8B%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.jpg)
-    no-repeat;
-  margin: 40px 388px;
-}
 
 .клиенты h3 {
-  float: left;
   font-size: 30px;
   color: #263244;
   font-weight: 600;
-  margin: 0px 0px 0px 388px;
 }
 .клиенты h6 {
-  float: left;
   color: #263244;
-  margin: 30px 0px 0px -105px;
+  text-align: left;
+  margin-top: 10px;
 }
 .веб-сайт h3 {
-  float: left;
   font-size: 30px;
   color: #263244;
   font-weight: 600;
-  margin: 40px 0px 0px -175px;
 }
 .веб-сайт h6 {
-  float: left;
+  text-align: left;
   color: #263244;
-  margin: 80px 0px 0px -175px;
+  margin-top: 10px;
 }
 .название_проекта h4 {
   float: left;
   font-size: 21px;
   color: #263244;
   font-weight: 600;
-  margin: -26px 0px 0px 0px;
+  margin: -145px 0px 0px 300px;
 }
 .название_проекта h5 {
   float: left;
   font-size: 18px;
   color: #263244;
   font-weight: 500;
-  margin: 17px 0px 0px 0px;
-}
-.посетить_сайт a {
-  float: left;
-  height: 60px;
-  text-align: center;
-  border: 0px solid;
-  background-color: #63b5ae;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 23px 10px;
-  margin: 120px 0px 0px -570px;
-}
-.посетить_сайт a {
-  transform: scale(1);
-  transition: all 0.3s;
-}
-.посетить_сайт a:hover {
-  transform: scale(1.2);
-}
-.посетить_сайт a:active {
-  transform: scale(1.1);
+  margin: -105px 0px 0px 300px;
 }
 
-div.расчет_стоимости {
+@media (max-width: 580px) {
+  .посетить__сайт {
+    margin-left: 10px;
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .название_проекта h5 {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 450px) {
+  .название_проекта h4 {
+    margin: 10px 0px 0px 0px;
+  }
+  .название_проекта h5 {
+    margin: 5px 0px 0px 0px;
+  }
+}
+@media (max-width: 1400px) {
+  section.кейсы {
+    height: 1050px;
+  }
+}
+@media (max-width: 1200px) {
+  section.кейсы {
+    height: 950px;
+  }
+}
+@media (max-width: 990px) {
+  section.кейсы {
+    height: 850px;
+  }
+}
+@media (max-width: 768px) {
+  section.кейсы {
+    height: 750px;
+  }
+}
+section.расчет_стоимости {
   float: left;
   width: 100%;
   height: 860px;
@@ -442,99 +494,43 @@ div.расчет_стоимости {
   font-size: 22px;
   color: #263244;
   text-transform: uppercase;
-  margin: 50px 0px 0px 500px;
 }
-.ctoimoct select {
-  height: 50px;
-  width: 887px;
-  text-align: left;
-  font-size: 20px;
-  color: #263244;
-  border: 0px solid;
-  background-color: #eeeeee;
-  border-radius: 10px;
-  padding: 0px 15px;
-  margin: 20px 0px 0px 500px;
-  transform: scale(1);
-  transition: all 0.3s;
-}
-.ctoimoct select:hover {
-  background-color: #db8755;
-  transform: scale(1.03);
-}
+
 .дизайн h3 {
   font-size: 22px;
   color: #263244;
   text-transform: uppercase;
-  margin: 50px 0px 0px 500px;
 }
-.дизайн select {
-  height: 50px;
-  width: 887px;
-  text-align: left;
-  font-size: 20px;
-  border: 0px solid;
-  background-color: #eeeeee;
-  border-radius: 10px;
-  padding: 0px 15px;
-  margin: 20px 0px 0px 500px;
-  transform: scale(1);
-  transition: all 0.3s;
-}
-.дизайн select:hover {
-  background-color: #db8755;
-  transform: scale(1.03);
-}
+
 .адаптивность h3 {
   font-size: 22px;
   color: #263244;
   text-transform: uppercase;
-  margin: 50px 0px 0px 500px;
 }
-.адаптивность select {
-  height: 50px;
-  width: 887px;
-  text-align: left;
-  font-size: 20px;
-  border: 0px solid;
-  background-color: #eeeeee;
-  border-radius: 10px;
-  padding: 0px 15px;
-  margin: 20px 0px 0px 500px;
-  transform: scale(1);
-  transition: all 0.3s;
-}
-.адаптивность select:hover {
-  background-color: #db8755;
-  transform: scale(1.03);
-}
+
 .линия_стоимости {
   height: 5px;
-  width: 887px;
+
   border: 0px solid#263244;
   background-color: #eeeeee;
-  margin: 20px 0px 0px 500px;
 }
 .расчет_стоимости h4 {
   font-size: 22px;
-  margin: 20px 0px 0px 500px;
 }
 h4 p {
   font-size: 20px;
-  margin: -21px 0px 0px 860px;
 }
 h4 span {
   font-size: 20px;
-  margin: -20px 0px 0px 745px;
 }
 
-div.немного_статистики {
+.немного_статистики {
   float: left;
   width: 100%;
   height: 500px;
   background: url(../img/%D1%84%D0%BE%D0%BD%20%D0%BD%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8.jpg)
     center;
-  background-size: 110% 110%;
+  background-size: auto 100%;
   background-attachment: fixed;
 }
 .немного_статистики h2 {
@@ -544,22 +540,18 @@ div.немного_статистики {
   font-weight: 600;
   margin-top: 110px;
 }
-.смайлик {
-  float: left;
-  margin: 100px 0px 0px 490px;
+.смайлик div {
   animation: flip;
+  flex-direction: column;
+  align-items: center;
 }
 .смайлик h4 {
-  float: left;
-  margin: 30px 0px 0px 4px;
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 26px;
 }
 .смайлик h6 {
-  float: left;
-  margin: 60px 0px 0px -97px;
   text-align: center;
   color: #616876;
   font-size: 16px;
@@ -575,19 +567,14 @@ div.немного_статистики {
 
 .больше_меньше {
   float: left;
-  margin: 100px 160px;
 }
 .больше_меньше h4 {
-  float: left;
-  margin: 30px 0px 0px 0px;
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 26px;
 }
 .больше_меньше h6 {
-  float: left;
-  margin: 60px 0px 0px -85px;
   text-align: center;
   color: #616876;
   font-size: 16px;
@@ -595,46 +582,35 @@ div.немного_статистики {
 }
 .галочка {
   float: left;
-  margin: 100px 20px;
 }
 .галочка h4 {
-  float: left;
-  margin: 30px 0px 0px 5px;
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 26px;
 }
 .галочка h6 {
-  float: left;
-  margin: 60px 0px 0px -95px;
   text-align: center;
   color: #616876;
   font-size: 16px;
   font-weight: 600;
 }
-.кубок {
-  float: left;
-  margin: 100px 170px;
+.чаша img {
+  padding: 50% 0%;
 }
 .кубок h4 {
-  float: left;
-  margin: 30px 0px 0px 15px;
   text-align: center;
   color: #cf7600;
   font-weight: 700;
   font-size: 26px;
 }
 .кубок h6 {
-  float: left;
-  margin: 60px 0px 0px -75px;
   text-align: center;
   color: #616876;
   font-size: 16px;
   font-weight: 600;
 }
-
-div.отзывы {
+section.отзывы {
   float: left;
   width: 100%;
   height: 650px;
@@ -651,7 +627,6 @@ div.отзывы {
   width: 150px;
   background: no-repeat;
   background-size: 100%/100%;
-  margin: 59px 884px;
 }
 .отзывы h6 {
   font-size: 26px;
@@ -670,8 +645,7 @@ footer {
   width: 100%;
   height: 810px;
   background: url(../img/%D1%84%D0%BE%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B2%D0%B0%D0%BB.jpg)
-    no-repeat;
-  background-size: 100% 810px;
+    center;
 }
 .мои_контакты h2 {
   font-size: 30px;
@@ -686,42 +660,38 @@ footer {
   margin-top: 30px;
 }
 .geo img {
-  float: left;
-  margin: 70px 0px 0px 710px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .geo p {
-  float: left;
-  margin: 90px 0px 0px -75px;
   text-align: center;
   color: #fff;
   font-size: 14px;
 }
 .почта img {
-  float: left;
-  margin: 60px 0px 0px 153px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .почта p {
-  float: left;
-  margin: 80px 0px 0px -90px;
   text-align: center;
   color: #fff;
   font-size: 14px;
 }
 .телефон img {
-  float: left;
-  margin: 45px 0px 0px 153px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .телефон p {
-  float: left;
-  margin: 65px 0px 0px -75px;
   text-align: center;
   color: #fff;
   font-size: 14px;
 }
 .оставте_мне_сообщение h3 {
-  float: left;
   color: #fff;
-  margin: 120px 0px 0px -420px;
+  text-align: center;
   font-size: 20px;
 }
 .форма_заполнения input {
@@ -733,7 +703,6 @@ footer {
   background-color: #eeeeee;
   border-radius: 3px;
   padding: 0px 15px;
-  margin: 150px 0px 0px -610px;
 }
 .mail input {
   float: left;
@@ -745,11 +714,9 @@ footer {
   background-color: #eeeeee;
   border-radius: 3px;
   padding: 0px 15px;
-  margin: -40px 0px 0px 950px;
 }
 .texst textarea {
-  float: left;
-  height: 200px;
+  /*height: 200px;
   width: 608px;
   text-align: left;
   font-size: 20px;
@@ -757,10 +724,15 @@ footer {
   background-color: #eeeeee;
   border-radius: 3px;
   padding: 0px 15px;
-  margin: 12px 0px 0px 640px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+.поле_ввода {
+  display: block;
+  height: 200px;
 }
 .отправить input {
-  float: left;
   height: 40px;
   text-align: center;
   border: 2px solid #fff;
@@ -770,8 +742,10 @@ footer {
   font-size: 16px;
   font-weight: 600;
   padding: 0px 10px;
-  margin: 220px 0px 0px -355px;
   transform: scale(1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .отправить input {
@@ -786,28 +760,15 @@ footer {
 .отправить input:active {
   transform: scale(1.05);
 }
-.фейс img {
-  float: left;
-  margin: 285px 0px 0px -400px;
-}
 .фейс img:hover {
   animation: вращение 2s ease;
-}
-.твит img {
-  float: left;
-  margin: 285px 0px 0px -315px;
 }
 .твит img:hover {
   animation: вращение 2s ease;
 }
-.инст img {
-  float: left;
-  margin: 285px 0px 0px -220px;
-}
 .инст img:hover {
   animation: вращение 2s ease;
 }
-
 @keyframes вращение {
   0% {
     transform: rotateY(360deg);
