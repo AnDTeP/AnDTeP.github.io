@@ -1,12 +1,17 @@
 "use strict"
 
-
+var range = document.querySelector('#range'),
+    rasstoyanie = document.querySelector('.rasstoyanie').innerHTML = range.value;
+range.onchange = function(){
+    var rasstoyanie = document.querySelector('.rasstoyanie').innerHTML = range.value;
+}
+function printinfo(){
 const vizitka = 1000,
       korporativ = 2000,
       leiding = 1500,
       magazin = 2500;
 
-let type = prompt ("Выберите тип сайта \n\ 1-Сайт визитка \n\ 2-Корпоративный \n\ 3-Лейдинг-пейдж \n\ 4-Интернет магазин");
+let type = document.getElementById('type').value;
 console.log (type);
 
 if (type === "1") {
@@ -31,7 +36,7 @@ const color = 500,
       ch_b = 200,
       kartinka = 400;
 
-let design = prompt ("Выберите дизайн сайта \n\ 1-Цветной \n\ 2-Черно-белый \n\ 3-Картинки");
+let design = document.getElementById('design').value;
 console.log (design);
 
 if (design === "1") {
@@ -51,7 +56,7 @@ const pk = 5000,
       mobail = 3000,
       pk_mobail = 7000;    
 
-let adaptability = prompt ("Выберите адаптивность сайта \n\ 1-ПК \n\ 2-Мобильный \n\ 3-ПК+Мобильный");
+let adaptability = document.getElementById('adaptability').value;
 console.log (adaptability);
 
 if (adaptability === "1") {
@@ -73,7 +78,7 @@ const minim = 8000,
       maxsim = 4000,
       nane = 1000;
 
-let timing = prompt ("Введите сроки дней \n\ (1-30 дней)");
+let timing = document.getElementById('range').value;
 console.log (timing);
 
 if (timing == 1 || timing > 1 && timing < 10 || timing == 10) {
@@ -91,14 +96,121 @@ else if (timing > 30){
 else{timing === 0}
 
 console.log (timing);
-
-
-
-
+var
+    out = document.querySelector('#out');
 
 
 
 let total = (type + design + adaptability + timing)
 console.log (total);
 
-alert (total)
+out.innerHTML = total;
+
+};
+
+/*$(window).scroll(()=> {
+    let scrollDistance = $(window).scrollTop();
+
+    $(".listi").each((i, el) => {
+
+        if($(el).offset().top - $("nav").outerHeight() <= scrollDistance){
+            $("nav a").each((i, el) => {
+                if($(el).hasClass("active")){
+                    $(el).removeClass("active");
+                }
+            });
+            $('nav li:eq('+ i +')').find('a').addClass('active');
+        }
+    });
+});
+*/
+
+
+$('a[href="#obo_mne"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 100 + "px"});
+});
+
+$('a[href="#chto_y_ymeu"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 100 + "px"});
+});
+
+$('a[href="#keis"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 0 + "px"});
+});
+
+$('a[href="#raschet_ctoimosti"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 0 + "px"});
+});
+
+$('a[href="#statistika"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 150 + "px"});
+});
+
+$('a[href="#otzivi"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 100 + "px"});
+});
+
+
+
+/*
+ let options = {threshold: [1]};
+ let observer = new IntersectionObserver(onEntry, option);
+ let elements = $('#out_1');
+ elements.each((i,el) => {
+     observer.observe(el);
+ });
+ function onEntry(entry){
+     entry.forEach(change => {
+         if (change.Intersecting){
+             change.target.classList.add('#out_1');
+         }
+     });
+ };*/
+
+ $(document).ready(function () {
+
+    var show = true;
+    var countbox = ".benefits__inner";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false;
+        var w_top = $(window).scrollTop();
+        var e_top = $(countbox).offset().top;
+        var w_height = $(window).height();
+        var d_height = $(document).height();
+        var e_height = $(countbox).outerHeight(); 
+        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            $('.benefits__number').css('opacity', '1');
+            $('.benefits__number').spincrement({
+                thousandSeparator: "",
+                duration: 4200
+            });
+
+            show = false;
+        }
+    });
+
+});
+
+
+
+$(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+  });
+
+  
+  
+$(document).ready(function(){
+    showStartModal();
+});
+
+function showStartModal(){
+    setTimeout(function(){
+        $('#exampleModal').modal('show');
+    }, 10000);
+}

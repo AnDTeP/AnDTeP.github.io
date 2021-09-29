@@ -74,7 +74,9 @@ main {
 .menu li:nth-child(6) {
   animation-delay: 2.4s;
 }
-
+.menu li:nth-child(7) {
+  animation-delay: 2.8s;
+}
 .menu li a {
   color: #fff;
   text-decoration: none;
@@ -172,7 +174,7 @@ main {
   transform: scale(1.05);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .title_container,
   .title_container h4,
   .title_container input {
@@ -511,6 +513,24 @@ h4 span {
   font-size: 20px;
 }
 
+label.sroki {
+  font-size: 20px;
+  color: #263244;
+  text-transform: uppercase;
+}
+div.sroki1 {
+  display: inline;
+  font-size: 20px;
+  color: #263244;
+  text-transform: uppercase;
+}
+
+.custom-range {
+  width: 100%;
+  height: calc(1rem + 0.4rem);
+  padding: 0% 4%;
+}
+
 .немного_статистики {
   float: left;
   width: 100%;
@@ -599,6 +619,13 @@ h4 span {
   font-size: 16px;
   font-weight: 600;
 }
+.benefits__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+
 section.отзывы {
   float: left;
   width: 100%;
@@ -611,19 +638,19 @@ section.отзывы {
   font-weight: 600;
   margin-top: 110px;
 }
-.отзывы img {
+.foto img {
   height: 150px;
   width: 150px;
   background: no-repeat;
   background-size: 100%/100%;
 }
-.отзывы h6 {
+.foto h6 {
   font-size: 26px;
   text-align: center;
   color: #3f495a;
   margin-top: 10px;
 }
-.отзывы p {
+.foto p {
   font-size: 16px;
   text-align: center;
   color: #3f495a;
